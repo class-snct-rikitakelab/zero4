@@ -33,7 +33,9 @@
 
 
 void strategies_init(){
-
+	
+	first_straight_speedUp_factory_init();
+	
 	first_curve_factory_init();
 	after_slope_straight_factory_init();
 	slope_factory_init();

@@ -25,7 +25,7 @@ float DrivenDirector_calc_turn_value(DrivenDirector *self,float target_brightnes
 		+  use_controller.target_curvature_controller_weight*curvature_turn /*+ use_controller.target_runner_angle_controller_weight direction_turn*/;
 	
 	//logSend(0,DirectionEncoder_get_direction(&directionEncoder),CurvatureEncoder_get_curvature(&curvatureEncoder)*1000,DistanceEncoder_get_total_distance(&distanceEncoder),CoordinateEncoder_get_xCoo(&coordinateEncoder),CoordinateEncoder_get_yCoo(&coordinateEncoder),0,0);
-	logSend(0,0, BrightnessEncoder_get_brightness_normalize(&brightnessEncoder)*1000,0,0,0,0,0);
+	logSend(0,0, BrightnessEncoder_get_brightness_normalize(&brightnessEncoder)*1000,SpeedEncoder_get_speed(&speedEncoder),0,0,0,0);
 
 
 
