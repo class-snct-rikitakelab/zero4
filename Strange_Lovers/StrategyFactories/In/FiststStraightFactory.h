@@ -8,17 +8,22 @@
 
 //StarategyPart
 
-Section firstStraight;
+Section firstStraightSpeedUp;
 RunningMethod stableRunningMethod;
+RunningMethod speedUpMethod;
+
+RunningMethod first_straight_speedUp_running_method_array[2];
+
+
+Section firstStraight;
 RunningMethod straightLineTraceMethod;
 
-RunningMethod first_straight_running_method_array[2];
+RunningMethod first_straight_running_method_array[1];
 
 
-//Section firstCurve;
 
-
-//StrategyPart/RunningMethodSwitchJudge
+extern void first_straight_speedUp_factory_init();
+extern void first_straight_factory_init();
 
 
 extern void first_straight_factory_init();

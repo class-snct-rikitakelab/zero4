@@ -27,7 +27,7 @@ void after_slope_straight_factory_init(){
 	
 	afterSlopeStraight.target_values.target_brightness=0.5;
 	afterSlopeStraight.target_values.target_curvature=0;
-	afterSlopeStraight.target_values.target_speed=400;
+	afterSlopeStraight.target_values.target_speed=100;
 	
 	afterSlopeStraight.nextSection = &firstCurve;
 

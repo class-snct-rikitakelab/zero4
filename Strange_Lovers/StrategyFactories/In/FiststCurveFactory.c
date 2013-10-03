@@ -32,7 +32,7 @@ void first_curve_factory_init(){
 	firstCurve.running_methods=first_curve_running_method_array;
 	firstCurve.target_values.target_curvature=-0.001315789;
 	firstCurve.target_values.target_brightness=0.4;
-	firstCurve.target_values.target_speed=400;
+	firstCurve.target_values.target_speed=300;
 	firstCurve.nextSection = &secondStraight;
 
 }
