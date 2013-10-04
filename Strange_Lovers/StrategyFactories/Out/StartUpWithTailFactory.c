@@ -19,7 +19,7 @@ void start_up_with_tail_factory_init(){
 	switch_term.speed = 0;
 	switch_term.time =0;
 	balancing_requrement = 0;
-	target_tail_angle=95;
+	target_tail_angle=100;
 	gyroOffsetRevise=0;
 	request_forced_stop= 1;
 	movementDirection = FORWARD;
@@ -34,6 +34,6 @@ void start_up_with_tail_factory_init(){
 	target_values.target_brightness = 0.5;
 	target_values.target_curvature = 0.0;
 	target_values.target_speed = 0;
-	Section *nextSection = &firstStraight;
+	Section *nextSection = &firstStraightSpeedUp;
 	Section_init(&startUpWithTail,nextSection,number_of_running_method,start_up_with_tail_running_method_array,target_values);
 }

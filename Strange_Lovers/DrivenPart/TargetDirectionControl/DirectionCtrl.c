@@ -7,12 +7,12 @@
 
 
 //fake implementation
-int DirectionCtrl_run(DirectionCtrl *this_DirectionCtrl,int target_direction)
+float DirectionCtrl_run(DirectionCtrl *this_DirectionCtrl,int target_direction)
 {
 	static	float	hensa = 0;
-	static	int		turn = 0;
+	static	float		turn = 0;
 
-	static const float dKp = 0.5;
+	static const float dKp = 2.0;
 	static const float dKi = 0.00	;
 	static const float dKd =	0.0;
 

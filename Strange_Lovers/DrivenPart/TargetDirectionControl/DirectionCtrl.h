@@ -11,7 +11,7 @@ typedef struct {
 int DirectionCtrl_do_direction_ctrl(DirectionCtrl *this_DirectionCtrl);
 
 
-int DirectionCtrl_run(DirectionCtrl *this_DirectionCtrl,int target_direction);
+float DirectionCtrl_run(DirectionCtrl *this_DirectionCtrl,int target_direction);
 
 
 #endif

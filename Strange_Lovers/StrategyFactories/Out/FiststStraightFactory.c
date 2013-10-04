@@ -13,14 +13,14 @@ void first_straight_speedUp_factory_init(){
 	//stableRunningMethod
 	use_controller.target_curvature_controller_weight = 0.0;
 	use_controller.target_light_controller_weight = 0.0;
-	use_controller.target_runner_angle_controller_weight =1.0
+	use_controller.target_runner_angle_controller_weight =1.0;
 	switch_term.distance =	40000000;//40000;
 	switch_term.inclination = 0;
 	switch_term.inPushed = 0;
 	switch_term.speed = 0;
 	switch_term.time =0;
 	balancing_requrement = 0;
-	target_tail_angle=95;
+	target_tail_angle=100;
 	gyroOffsetRevise=0;
 	request_forced_stop =0; 
 	movementDirection = FORWARD;
@@ -51,7 +51,7 @@ void first_straight_speedUp_factory_init(){
 	target_values.target_brightness = 0.5;
 	target_values.target_curvature = 0.0;
 	target_values.target_speed = 800;
-	target_values.target_direction = 0;
+	target_values.target_runner_angle = 0;
 	Section *nextSection = &firstStraight;
 	Section_init(&firstStraightSpeedUp,nextSection,number_of_running_method,first_straight_speedUp_running_method_array,target_values);
 }
