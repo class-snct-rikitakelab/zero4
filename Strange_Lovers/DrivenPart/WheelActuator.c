@@ -1,6 +1,9 @@
 #include "WheelActuator.h"
 #include "../Factory.h"
 
+#define KINGYO_PWM_HOSEI 0.987
+
+
 static void WheelActuator_reset_wheel_motors(WheelActuator *self);
 static int WheelActuator_need_reset_balancer(WheelActuator *self,int self_balancing_requirment);
 
@@ -34,8 +37,12 @@ void WheelActuator_set_turn(WheelActuator *self , float turn){
 }
 
 void WheelActuator_tail_running(WheelActuator *self,S8 *pwm_l,S8 *pwm_r){
-	*pwm_l = cutoff(self->forward + self->turn,100);
-	*pwm_r = cutoff(self->forward - self->turn,100);
+	//*pwm_l = cutoff(self->forward + self->turn,100);
+	//*pwm_r = cutoff(self->forward - self->turn,100);
+	
+	*pwm_l = cutoff(100*KINGYO_PWM_HOSEI,100);
+	*pwm_r = cutoff(100,100);
+	
 }
 
 void WheelActuator_dirve_motors(WheelActuator *self){

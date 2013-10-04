@@ -34,6 +34,6 @@ void start_up_with_tail_factory_init(){
 	target_values.target_brightness = 0.5;
 	target_values.target_curvature = 0.0;
 	target_values.target_speed = 0;
-	Section *nextSection = &seesaw_1;
+	Section *nextSection = &firstStraight;
 	Section_init(&startUpWithTail,nextSection,number_of_running_method,start_up_with_tail_running_method_array,target_values);
 }

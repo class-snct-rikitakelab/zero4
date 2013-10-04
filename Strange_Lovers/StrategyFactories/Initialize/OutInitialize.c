@@ -63,7 +63,7 @@ void strategies_init(){
 	seesaw_Upslope_factory_init();
 	seesaw_4_factory_init();
 
-	startSection = &startUp;
+	startSection = &startUpWithTail;
 
 }
 
