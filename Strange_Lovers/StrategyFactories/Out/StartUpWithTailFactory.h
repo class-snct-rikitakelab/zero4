@@ -4,6 +4,7 @@
 #include "../StrategyFactories_inculude.h"
 
 #include "SeeSaw_1Factory.h"
+#include "FiststStraightFactory.h"
 
 
 //StarategyPart
