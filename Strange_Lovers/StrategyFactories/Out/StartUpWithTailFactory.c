@@ -19,7 +19,7 @@ void start_up_with_tail_factory_init(){
 	switch_term.speed = 0;
 	switch_term.time =0;
 	balancing_requrement = 0;
-	target_tail_angle=95;
+	target_tail_angle=100;
 	gyroOffsetRevise=0;
 	request_forced_stop= 1;
 	movementDirection = FORWARD;

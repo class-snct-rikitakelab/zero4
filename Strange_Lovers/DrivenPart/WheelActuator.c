@@ -37,11 +37,21 @@ void WheelActuator_set_turn(WheelActuator *self , float turn){
 }
 
 void WheelActuator_tail_running(WheelActuator *self,S8 *pwm_l,S8 *pwm_r){
+	S8 rivised_pwm_l=0,rivised_pwm_r=0;
 	//*pwm_l = cutoff(self->forward + self->turn,100);
 	//*pwm_r = cutoff(self->forward - self->turn,100);
 	
-	*pwm_l = cutoff(100*KINGYO_PWM_HOSEI,100);
-	*pwm_r = cutoff(100,100);
+	if(self->turn>=0){
+		rivised_pwm_l = 100;
+		rivised_pwm_r = 100- self->turn ;
+	}
+	else {
+		rivised_pwm_l = 100 - (-self->turn);
+		rivised_pwm_r = 100;
+	}
+	*pwm_l = cutoff(rivised_pwm_l,100);
+	*pwm_r = cutoff(rivised_pwm_r,100);
+	logSend(rivised_pwm_l,rivised_pwm_r,self->turn,0,SpeedEncoder_get_speed(&speedEncoder),DirectionEncoder_get_direction(&directionEncoder),0,0);
 	
 }
 
