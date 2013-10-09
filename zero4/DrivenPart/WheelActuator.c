@@ -38,17 +38,14 @@ void WheelActuator_set_turn(WheelActuator *self , float turn){
 
 void WheelActuator_tail_running(WheelActuator *self,S8 *pwm_l,S8 *pwm_r){
 	//•Ð•û‚Ìƒ‚[ƒ^‚Íí‚É‚o‚v‚l’l100‚É‚È‚é‚æ‚¤‚ÉŒvŽZ‚·‚éƒƒWƒbƒN
-	S8 rivised_pwm_l=0,rivised_pwm_r=0;
 	if(self->turn>=0){
-		rivised_pwm_l = 100;
-		rivised_pwm_r = 100- self->turn ;
+		*pwm_l = 100;
+		*pwm_r = 100- self->turn ;
 	}
 	else {
-		rivised_pwm_l = 100 - (-self->turn);
-		rivised_pwm_r = 100;
+		*pwm_l = 100 - (-self->turn);
+		*pwm_r = 100;
 	}
-	*pwm_l = cutoff(rivised_pwm_l,100);
-	*pwm_r = cutoff(rivised_pwm_r,100);
 	
 }
 
