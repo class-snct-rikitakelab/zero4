@@ -2,7 +2,6 @@
 #include "../logSend.h"
 #include "../Factory.h"
 #include "../EncoderPart/DistanceEncoder.h"
-#include "ecrobot_interface.h"
 
 #include "../EncoderPart/BrightnessEncoder.h"
 
@@ -18,6 +17,7 @@ float DrivenDirector_calc_turn_value(DrivenDirector *self,float target_brightnes
 	LV_setTargLightVal(&mLightVal,target_brightness);
 	PLVC_setMovementDirection(mLightValCtrl.mPIDLightValCtrl,movementDirection);
 	PCC_setMovementDirection(mCurvatureCtrl.mPIDCurvatureCtrl,movementDirection);
+	
 	float direction_turn = DirectionCtrl_run(&directionCtrl,target_runner_angle);
 
 	return direction_turn;

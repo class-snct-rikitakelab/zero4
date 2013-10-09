@@ -60,11 +60,6 @@ void user_1ms_isr_type2(void){
 
 
 TASK(INITIALIZE){
-	while(1){
-		if(Calibration_calibration(&calibration) ==1){
-			break;
-		}
-	}
 	Runner_start_run(&runner);
 	TerminateTask();
 }

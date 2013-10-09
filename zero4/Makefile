@@ -76,31 +76,8 @@ TARGET_SOURCES := \
 	./StrategyPart/RunningMethodSwitchJudge/DirectionSwitch.c \
 	./StrategyPart/RunningMethodSwitchJudge/DirectionDistanceMultipleSwitch.c \
 	./StrategyPart/RunningMethodSwitchJudge/MarkerSwitch.c \
-	./StrategyFactories/Out/StartUpFactory.c \
 	./StrategyFactories/Out/StartUpWithTailFactory.c \
 	./StrategyFactories/Out/FiststStraightFactory.c \
-	./StrategyFactories/Out/SlopeFactory.c \
-	./StrategyFactories/Out/AfterSlopeStraightFactory.c \
-	./StrategyFactories/Out/FiststCurveFactory.c \
-	./StrategyFactories/Out/SecondStraightFactory.c \
-	./StrategyFactories/Out/SecondCurveFactory.c \
-	./StrategyFactories/Out/ThurdStraightFactory.c \
-	./StrategyFactories/Out/ThurdCurveFactory.c \
-	./StrategyFactories/Out/ForthStraightFactory.c \
-	./StrategyFactories/Out/ForthCurveFactory.c \
-	./StrategyFactories/Out/OutFifthStraightFactory.c \
-	./StrategyFactories/Out/AfterOutFifthCurveStraight.c \
-	./StrategyFactories/Out/OutFifthCurveFactory.c \
-	./StrategyFactories/Out/OutSixthCurveFactory.c \
-	./StrategyFactories/Out/SeeSaw_1Factory.c \
-	./StrategyFactories/Out/SeeSaw_StopFactory.c \
-	./StrategyFactories/Out/SeeSaw_2Factory.c \
-	./StrategyFactories/Out/SeeSaw_2_2Factory.c \
-	./StrategyFactories/Out/SeeSaw_3Factory.c \
-	./StrategyFactories/Out/SeeSaw_4Factory.c \
-	./StrategyFactories/Out/SeeSaw_5Factory.c \
-	./StrategyFactories/Out/SeeSaw_2_3Factory.c \
-	./StrategyFactories/Out/SeeSaw_UpslopeFactory.c \
 	./StrategyFactories/Initialize/OutInitialize.c \
 
 TOPPERS_OSEK_OIL_SOURCE := ./prog.oil
